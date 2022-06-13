@@ -1,0 +1,289 @@
+:root {
+  --color-primario: #c0c5ff80;
+  --color-letra: #2a80ad;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 65.2%;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  scroll-behavior: smooth;
+}
+a {
+  text-decoration: none;
+  color: var(--color-letra);
+}
+.header nav ul li a:hover {
+  color: #fff;
+}
+
+.header,
+.header div,
+.header nav  {
+  height: 70px;
+  display: flex;
+  align-items: center;
+}
+.header div img {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+}
+.header {
+  justify-content: space-between;
+  background-color: var(--color-primario);
+  color: var(--color-letra);
+  padding: 0 30px;
+  
+}
+.header div h2{
+  font-size: 2.4rem;
+}
+.header nav ul {
+  display: flex;
+}
+.header nav ul li {
+  list-style: none;
+  margin-right: 15px;
+  font-size: 1.8rem;
+}
+
+.main {
+  position: relative;
+  height: calc(100vh - 70px);
+  display: grid;
+  place-content: center;
+  background-image: url("assets/alumnos_clase.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+
+  opacity: 0.8;
+}
+.dark {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0 0 0 / 30%);
+}
+
+.form {
+  z-index: 999;
+  width: 400px;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 15px;
+  background-color: #dfe2ffad;
+}
+.form input {
+  padding: 10px;
+  margin-bottom: 15px;
+  outline: none;
+  border: none;
+}
+.form input[type="submit"] {
+  width: 150px;
+  margin: 0 auto;
+  padding: 10px 15px;
+  margin-bottom: 30px;
+  background-color: var(--color-letra);
+  color: #ffff;
+  font-weight: bold;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+.form h2 {
+  margin-bottom: 30px;
+  text-align: center;
+  color: var(--color-letra);
+  font-size: 22px;
+  padding: 0 20px;
+}
+.form p {
+  font-size: 14px;
+  text-align: center;
+}
+
+/* header de inicio de sesion */
+
+.header_datos p{
+  font-size: 12px;
+}
+
+.alert {
+  position: absolute;
+  top: 70px;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 30px;
+  justify-content: center;
+  color: var(--color-letra);
+  font-weight: bold;
+  font-size: 14px;
+}
+.alert img {
+  height: 100%;
+  margin-right: 20px;
+}
+.error {
+  color: #fff;
+  background-color: rgb(255 255 47 / 50%);
+}
+.ok {
+  color: #fff;
+  background-color: rgb(42 231 95 / 48%);
+}
+.bad {
+  color: #fff;
+  background-color: #ff5959db;
+}
+
+/* body inicio de sesion */
+.welcome {
+  z-index: 99;
+  background-color:#dfe2ffad;
+  color: var(--color-letra);
+  width: 400px;
+  text-align: center;
+  padding: 20px;
+}
+.welcome h2 {
+  font-size: 24px;
+}
+.welcome div {
+  display: flex;
+  justify-content: center;
+}
+.welcome_name p:first-child {
+  margin-right: 5px;
+}
+.welcome_name p {
+  font-size: 18px;
+}
+ 
+/* nosotros */
+
+#nosotros {
+  height: 100vh;
+  width: 100%;
+  display: grid;
+  place-content: center;
+}
+.nosotros_info {
+  width: 1080px;
+  height: max-content;
+  background-color: var(--color-primario);
+  padding: 20px;
+}
+.nosotros_info h2,
+.galeria_main h2 {
+  text-align: center;
+  font-size: 24px;
+  color: var(--color-letra);
+  margin-bottom: 30px;
+}
+.nosotros_info p {
+  font-size: 14px;
+  line-height: 22px;
+}
+.nosotros_contenedor {
+  display: grid;
+  grid-template-columns: 60% 40%;
+}
+.nosotros_contenedor div h3 {
+  color: var(--color-letra);
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.nosotros_contenedor div:last-child {
+  margin: auto;
+  width: 300px;
+}
+
+.nosotros_contenedor div:last-child img{
+  width: 100%;
+}
+
+
+/* galeria  */
+
+#galeria {
+  margin-top: 50px;
+  display: grid;
+  place-items: center;
+  text-align: center;
+}
+.galeria_main {
+  width: 1080px;
+}
+.galeria_container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  
+}
+.galeria_container div {
+  width: 250px;
+  height: 200px;
+  margin-bottom: 20px;
+}
+.galeria_container div:hover {
+  transform: scale(1.1);
+}
+.galeria_container div img {
+  width: 100%;
+  height: 100%;
+}
+
+/* footer */
+.footer {
+  padding: 0 30px;
+  background-color: var(--color-primario);
+  width: 100%;
+}
+.footer .container{
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.footer h3 {
+  color: var(--color-letra);
+  margin: 0;
+  font-size: 16px;
+  letter-spacing: 1px;
+}
+.footer h3 a {
+  text-decoration: none;
+  color: var(--color-letra);
+}
+.footer-redes ul{
+  display: flex;
+  align-items: center;
+}
+
+.footer-redes ul li:first-child {
+  width: 100px;
+  color: var(--color-letra);
+  font-size: 14px;
+}
+.footer-redes li {
+  width: 30px;
+  margin-right: 20px;
+  list-style: none;
+}
+
+
+.footer-redes li a svg{
+  fill: var(--color-letra);
+}
+.footer-redes li a svg:hover{
+  fill: #fff;
+}
+
